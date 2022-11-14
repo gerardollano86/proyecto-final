@@ -7,31 +7,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-.tituloPrincipal{
-    background-color: rgb(106, 245, 245);
-    text-align: center;
-    padding: 10px;
-    
-
-}
-.menuNavegacion{
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-.menuNavegacion ul li{
-    background-color:rgb(131, 207, 207);
-    margin: 20px;
-    display: inline-block;
-    padding: 0.7rem;
-    box-shadow: 1px 1px 5px black;
-    border-radius: 5px;
-}
-   
-    
+.titulo-pagina{
+     background-color: rgb(70, 187, 187);
+ }
 .cointenerPrincipal{
     background-color: white;
     padding: 10px;
