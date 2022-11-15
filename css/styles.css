@@ -10,78 +10,23 @@
 .titulo-pagina{
      background-color: rgb(70, 187, 187);
  }
-.cointenerPrincipal{
-    background-color: white;
-    padding: 10px;
- }
+.slide{
+    margin-top: 10px;
+}
+.slide img{
+    height: 65vh;
+}
 
- .cointenerPrincipal .promocionOff{
-    text-align: center;
- }
- .cointenerPrincipal .productosCatalogo{
-    text-align: center;
- }
- 
   .iconos ul li{
     margin: 10px;
     padding: 50px;
     display: inline-block;
  }
-  .primerOferta{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-}
-.segundaOferta{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-}
-.tercerOferta{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    
-}
-
-.productosCatalogo  .primerProducto{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.productosCatalogo .segundoProducto{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.productosCatalogo .tercerProducto{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.productosCatalogo .cuartoProducto{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-}
 
 /*footer*/
-.piePagina .referenciaFinal{
-    background-color: white;
-}
-.referenciaFinal li{
-    background-color: rgb(49, 209, 209);
-    display: inline-block;
-    padding: 50px;
-    margin: 20px;
-}
-h6{
-    background-color:whitesmoke;
-   padding: 25px;
-}
+
+
+
 
 /*imagenes Baby booys*/
 
@@ -102,4 +47,33 @@ h6{
 .sacoGris{
     height: 300px;
     width: 300px;
+}
+
+
+.container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-beba{
+    padding:5px 20px 5px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.button-beba a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.referenciaFinal{
+    padding: 10px;
+    justify-content: space-around;
+   
+}
+footer{
+    margin-top: 10px;
+    background-color: rgb(210, 214, 218);
 }
