@@ -22,11 +22,21 @@
     padding: 50px;
     display: inline-block;
  }
-
-/*footer*/
-
-
-
+ /*nav*/
+.nav-direction{
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: rgb(114, 163, 163);
+}
+.nav-direction:hover{
+    background-color: rgb(28, 212, 212);
+    
+}
+.nav-button{
+    border-color: rgb(114, 163, 163);
+}
 
 /*imagenes Baby booys*/
 
@@ -50,6 +60,9 @@
 }
 
 
+    
+
+/*body*/
 .container{
     margin-top: 10px;
     display: flex;
@@ -59,13 +72,18 @@
 .button-beba{
     padding:5px 20px 5px 20px;
     margin: 5px;
+    background-color: rgb(121, 180, 180);
     border-radius: 5px;
     font-size: large;
+    border-color: rgb(114, 163, 163);
+}
+.button-beba:hover{
+    background-color: rgb(105, 212, 212);
 }
 
 .button-beba a{
     text-decoration: none;
-    color: blueviolet;
+    color: white;
 }
 
 .referenciaFinal{
@@ -73,12 +91,16 @@
     justify-content: space-around;
    
 }
+/*footer*/
 footer{
     margin-top: 10px;
     background-color: rgb(210, 214, 218);
+    align-items: center;
 }
 
 .container-card{
+    margin: 5px;
+    padding:5px 20px 5px 20px ;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
