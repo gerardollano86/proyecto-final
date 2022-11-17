@@ -38,71 +38,7 @@
 .nav-button{
     border-color: rgb(114, 163, 163);
 }
-
-/*imagenes Baby booys*/
-
-.ropa-bohemia{
-    height: 300px;
-    width: 300px;
-}
-.conjunto-niño{
-    height: 300px;
-    width: 300px;
-}
-
-/*imagenes Baby girl*/
-.tituloPrincipal{
-    background-color:rgb(70, 187, 187) ;
-    text-align: center;
-    padding: 10px;
-}
-
-.menu-hijo{
-    list-style: none;
-        display: flex;
-        gap: 15px;
-        margin: 20px;
-}
-  .menu-nieto{
-    background-color: white;
-    padding: 10px;
-    text-shadow: 3px 2px 5px black;
-    border-radius: 5px;
-    box-shadow: 3px 2px 5px black;
-    
-  }
-.menu-nieto:hover{
- 
-    background-color: rgb(28, 212, 212);
-}
-
-.vestido-fantasia{
-    margin: 5px;
-    height: 300px;
-    width: 300px; 
-}
-.vestido-blanco{
-    padding: 5px;
-    height: 330px;
-    width: 300px;
-}
-p{
-    margin: 5px;
-    padding: 5px;
-    font-size: 1.2rem;
-}
-.conteiner-bg{
-   height: 700px; 
-   display: grid;
-   grid-template-columns:30% 70%;
-}
-.descripcion-producto{
-    margin: 5px;
-}
-
-    
-
-/*body*/
+/*body index*/
 .container{
     margin-top: 10px;
     display: flex;
@@ -130,10 +66,9 @@ p{
 
 
 /*footer*/
-footer{
+.piePagina{
     margin-top: 10px;
-    background-color: rgb(210, 214, 218);
-    align-items: center;
+    background-color: rgb(210, 214, 218);    
 }
 
 .referenciaFinal {
@@ -190,14 +125,264 @@ footer{
             margin: 8px;
         }
 }
+/* Baby girl*/
+.tituloPrincipal {
+    background-color: rgb(70, 187, 187);
+    text-align: center;
+    padding: 2px;
+}
+.menu-hijo {
+            padding: 5px;
+            background-color: rgb(225, 228, 231);
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+    
+}
+.menu-nieto {
+    background-color:rgb(120, 189, 189);
+    padding: 10px;
+    border-radius: 5px;
+}
+.menu-nieto:hover {
+    background-color: rgb(135, 228, 228);
+}
+
+.vestido-fantasia {
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+}
+
+ .vestido-blanco {
+    margin: 10px;
+    padding: 5px;
+    height: 330px;
+    width: 300px;
+}
+.fantasia-bg{
+    margin: 5px;
+    padding: 10px;
+}
+.titulo-vestido{
+   padding: 20px;
+}
+.titulo-bg{
+    display: flex;
+}
+.contain{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
+    grid-template-rows:0.2fr 4fr 4fr 1fr ;
+     
+    grid-template-areas: 
+    "header-bg header-bg header-bg header-bg"
+    "main-bg main-bg main-bg section-bg"
+    "main-bg main-bg main-bg section-bg"
+    "footer-bg footer-bg footer-bg footer-bg";
+}
+.header-bg{
+grid-area: header-bg;
+background-color: brown;
+display: inline-block;
+}
+.main-bg{
+    font-size: 20px;
+display: flex;
+grid-area: main-bg;
+background-color: rgb(133, 62, 62);
+}
+.section-bg{
+    display: flex;
+grid-area: section-bg;
+background-color: rgb(85, 44, 44);
+}
+.footer-bg{
+grid-area: footer-bg;
+background-color: rgb(230, 62, 62);
+}
+.unico-foot{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+}
+.unico-foot ul{
+    list-style: none;
+    display: flex;
+}
+.menu-nieto:hover{
+ background-color: rgb(105, 212, 212);
+ box-shadow: 1px 1px 2px black;
+ transform: scale(0.9);
+ }
+
+ /* Baby booys*/
+ .menu-navegacion{
+    padding: 5px;
+    background-color: rgb(225, 228, 231);
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+ }
+ .menu-navegacion ul{
+            background-color: rgb(120, 189, 189);
+            padding: 10px;
+            border-radius: 5px;
+ }
+ .conjunto-niño {
+     height: 300px;
+     width: 300px;
+ }
+ .conjunto-bohemio{
+    height: 300px;
+    width: 300px;
+ }
+ .contain-bb{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2.5fr 2.5fr 1fr;
+
+    grid-template-areas: 
+    "header-bb header-bb header-bb header-bb"
+    "main-bb main-bb section-bb section-bb"
+    "main-bb main-bb section-bb section-bb"
+    "footer-bb footer-bb footer-bb footer-bb";
+ }
+
+ .header-bb{
+width: 100%;
+grid-area: header-bb;
+align-items: center;
+justify-content: space-around;
+ }
+
+.menu-navegacion{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-navegacion ul{
+    display: flex;
+    justify-content:space-around;
+}
 
 
+.menu-navegacion ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-navegacion ul li a{
+    text-decoration: none;
+    margin: 15px;
+    padding: 15px;
+}
+
+ .main-bb{
+grid-area: main-bb;
+ }
+
+.container-1{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+    border: 2px solid black;
+    background-color: #cccc;
+    margin: 2px;
+}
+.container-1 img{
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.container-1 p{
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.section-bb{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 15px;
+    border: 2px solid black;
+    background-color: #cccc;
+}
+
+.section-bb img{
+    border-radius: 5px;
+    margin: 10px;
+    align-items: center;
+}
+
+.section-bb p{
+    text-align: center;
+    margin: 5px;
+}
 
 
+ .section-bb{
+grid-area: section-bb;
+
+ }
 
 
+.footer-bb div{
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+    margin-top: 10px;
+}
 
+.footer-bb div a {
+    text-decoration: none;
+}
 
+ .footer-bb{
+grid-area: footer-bb;
+background-color: rgb(210, 214, 218);
+ }
 
+ @media (min-width:360px) and (max-width:578px){
+    .contain-bb {
+            display: grid;
+            grid-template-columns: 2fr auto ;
+            grid-template-rows:2fr auto ;
+    
+            grid-template-areas:
+                "header-bb header-bb"
+                "main-bb main-bb"
+                "section-bb section-bb "
+                "footer-bb footer-bb";
+        }
+ }
 
+ @media (min-width:578px) and (max-width:920px){
+    .contain-bb {
+            display: grid;
+            grid-template-columns: 2fr auto auto;
+            grid-template-rows: 2fr auto auto;
+    
+            grid-template-areas:
+                "header-bb header-bb header-bb"
+                "main-bb main-bb main-bb"
+                "section-bb section-bb section-bb"
+                "footer-bb footer-bb footer-bb";
+        }
+ }
 
+ @media (min-width:920px) and (max-width:1216px){
+    .contain-bb {
+            display: grid;
+            grid-template-columns: 2fr auto 2fr auto;
+            grid-template-rows: 0.2fr auto 2fr auto;
+    
+            grid-template-areas:
+                "header-bb header-bb header-bb header-bb"
+                "main-bb main-bb section-bb section-bb"
+                "main-bb main-bb section-bb section-bb"
+                "footer-bb footer-bb footer-bb footer-bb";
+        }
+ }
