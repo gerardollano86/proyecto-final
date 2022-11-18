@@ -126,11 +126,13 @@
         }
 }
 /* Baby girl*/
+
 .tituloPrincipal {
     background-color: rgb(70, 187, 187);
     text-align: center;
     padding: 2px;
 }
+
 .menu-hijo {
             padding: 5px;
             background-color: rgb(225, 228, 231);
@@ -139,6 +141,11 @@
             gap: 3rem;
     
 }
+.menu-hijo a{
+    text-decoration: none;
+}
+
+
 .menu-nieto {
     background-color:rgb(120, 189, 189);
     padding: 10px;
@@ -148,10 +155,17 @@
     background-color: rgb(135, 228, 228);
 }
 
+.titulo-bg {
+    display: flex;
+    text-align: center;
+}
+
+
 .vestido-fantasia {
     margin: 10px;
     height: 300px;
     width: 300px;
+    border-radius: 5px;
 }
 
  .vestido-blanco {
@@ -159,20 +173,18 @@
     padding: 5px;
     height: 330px;
     width: 300px;
+    border-radius: 5px;
 }
 .fantasia-bg{
     margin: 5px;
     padding: 10px;
 }
-.titulo-vestido{
-   padding: 20px;
-}
-.titulo-bg{
-    display: flex;
-}
+
+
+
 .contain{
     display: grid;
-    grid-template-columns: 1fr  1fr 1fr 1fr;
+    grid-template-columns: 1fr  4fr 4fr auto;
     grid-template-rows:0.2fr 4fr 4fr 1fr ;
      
     grid-template-areas: 
@@ -181,35 +193,65 @@
     "main-bg main-bg main-bg section-bg"
     "footer-bg footer-bg footer-bg footer-bg";
 }
+
+
 .header-bg{
 grid-area: header-bg;
-background-color: brown;
 display: inline-block;
 }
+
+
+
 .main-bg{
-    font-size: 20px;
-display: flex;
+font-size: 20px;
+flex-wrap: wrap;
+text-align: center;
 grid-area: main-bg;
-background-color: rgb(133, 62, 62);
 }
-.section-bg{
+
+
+.main-bg .descripcion-producto{
     display: flex;
-grid-area: section-bg;
-background-color: rgb(85, 44, 44);
+    flex-direction: row;
 }
+
+.main-bg .descripcion-producto p{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.main-bg .img{
+    border-radius: 5px;
+}
+
+.titulo-vestido{
+    margin-top: 20px;
+}
+
+
+.section-bg{
+grid-area: section-bg;
+}
+
+.section-bg .descripcion-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .footer-bg{
 grid-area: footer-bg;
-background-color: rgb(230, 62, 62);
+background-color: #cccc;
 }
-.unico-foot{
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-}
+
 .unico-foot ul{
     list-style: none;
     display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }
+
 .menu-nieto:hover{
  background-color: rgb(105, 212, 212);
  box-shadow: 1px 1px 2px black;
@@ -345,6 +387,8 @@ grid-area: footer-bb;
 background-color: rgb(210, 214, 218);
  }
 
+
+ /*media query  pagina baby boy */
  @media (min-width:360px) and (max-width:578px){
     .contain-bb {
             display: grid;
@@ -357,6 +401,10 @@ background-color: rgb(210, 214, 218);
                 "section-bb section-bb "
                 "footer-bb footer-bb";
         }
+                .menu-navegacion ul {
+                    display:block;
+                    align-items: center;
+                }
  }
 
  @media (min-width:578px) and (max-width:920px){
@@ -386,3 +434,116 @@ background-color: rgb(210, 214, 218);
                 "footer-bb footer-bb footer-bb footer-bb";
         }
  }
+
+
+ /*media query baby girl */
+ @media (min-width:360px) and (max-width:578px){
+
+    .contain {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 0.2fr 4fr;
+
+        grid-template-areas:
+            "header-bg header-bg "
+            "main-bg main-bg"
+            "section-bg section-bg"
+            "footer-bg footer-bg";
+    }
+
+.menu-hijo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5px;
+
+}
+
+.main-bg .descripcion-producto {
+    display: block;
+
+}
+
+.main-bg .descripcion-producto p {
+    margin-top: 10px;
+    padding: 15px;
+    margin: 5px;
+}
+.footer-bg{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+.unico-foot ul{
+    display: flex;
+    flex-direction:column;
+    margin: 15px;
+    gap: 2rem;
+}
+
+.section-bg .descripcion-producto{
+    display: block;
+}
+.parrafo{
+        margin-top: 10px;
+        padding: 15px;
+        margin: 5px;
+}
+
+}
+
+@media (min-width:578px) and (max-width:920px){
+    .contain {
+          
+            grid-template-columns: 1fr 4fr auto;
+            grid-template-rows: 0.2fr 4fr  auto ;
+    
+            grid-template-areas:
+                "header-bg header-bg header-bg"
+                "main-bg main-bg  section-bg"
+                "main-bg main-bg  section-bg"
+                "footer-bg footer-bg footer-bg";
+        }
+   
+    .main-bg .descripcion-producto {
+        flex-direction: column;
+        align-items: center;
+}
+}
+
+
+@media (min-width:920px) and (max-width:1216px){
+.contain {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr auto;
+    grid-template-rows: 0.2fr 4fr 4fr 1fr;
+
+    grid-template-areas:
+        "header-bg header-bg header-bg header-bg"
+        "main-bg main-bg main-bg section-bg"
+        "main-bg main-bg main-bg section-bg"
+        "footer-bg footer-bg footer-bg footer-bg";
+}
+
+.menu-hijo {
+    display: flex;
+    justify-content: space-between;
+}
+.main-bg .descripcion-producto {
+   margin-top: 15px;
+}
+.titulo-vestido{
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.parrafo{
+    margin: 10px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.unico-foot ul{
+    gap: 5rem;
+}
+}
