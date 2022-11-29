@@ -1,0 +1,106 @@
+.titulo-pagina {
+    background-color: rgb(70, 187, 187);
+}
+.slide {
+    margin-top: 10px;
+}
+.slide img {
+    height: 65vh;
+}
+.iconos ul li {
+    margin: 10px;
+    padding: 50px;
+    display: inline-block;
+}
+/*nav*/
+.nav-direction {
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: rgb(114, 163, 163);
+}
+.nav-direction:hover {
+    background-color: rgb(28, 212, 212);
+
+}
+.nav-button {
+    border-color: rgb(114, 163, 163);
+}
+/*body index*/
+.container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.button-beba {
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    background-color: rgb(121, 180, 180);
+    border-radius: 5px;
+    font-size: large;
+    border-color: rgb(114, 163, 163);
+}
+.button-beba:hover {
+    background-color: rgb(105, 212, 212);
+    box-shadow: 1px 1px 2px black;
+    transform: scale(0.9);
+}
+.button-beba a {
+    text-decoration: none;
+    color: white;
+}
+/*footer*/
+.piePagina {
+    margin-top: 10px;
+    background-color: rgb(210, 214, 218);
+}
+.referenciaFinal {
+    padding: 10px;
+    justify-content: space-around;
+}
+.container-card {
+    margin: 10px;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/*media query index */
+@media (min-width:360px) and (max-width:578px) {
+    .slide img {
+        height: 40vh;
+    }
+    .container .buttons {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-card .card {
+        margin: 5px;
+    }
+    .referenciaFinal {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (min-width:578px) and (max-width:920px) {
+    .slide img {
+        height: 50vh;
+    }
+
+    .referenciaFinal {
+        margin: 10px;
+    }
+
+    .container-card .card {
+        margin: 8px;
+    }
+}
+@media (min-width:920px) and (max-width:1216px) {
+    .container-card .card {
+        margin: 8px;
+    }
+}
