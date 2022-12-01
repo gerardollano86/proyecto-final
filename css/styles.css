@@ -319,9 +319,9 @@ footer .facebook {
 
 .containerVideo {
   margin-top: 10px;
-  padding: 5px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 5px; }
 
 .containerParrafo {
   display: flex;

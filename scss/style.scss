@@ -283,7 +283,6 @@ footer{
     }
 }
 //baby boy
-
 .conjunto-niño {
 @include medidas(300px, 300px);
 }
@@ -310,7 +309,6 @@ footer{
 }
 .section-bb {
     grid-area: section-bb;
-
 }
 .footer-bb {
     grid-area: footer-bb;
@@ -394,7 +392,7 @@ footer{
 }
 
 
-//Contacto
+//Contacto - nosotros
 .tittleContacto{
     margin: 10px;
     font-size: 25px;
@@ -407,16 +405,13 @@ margin-left: 3px;
     justify-content: center;
 }
 .containerIframe{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    @include display;
 }
 
 .containerVideo{
-    margin-top: 10px;
+   @include display;
     padding: 5px;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .containerParrafo{
