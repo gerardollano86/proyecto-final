@@ -48,47 +48,53 @@
     </header>
 
        <main>
-            <div>
+            <div class="tittleContacto text-center">
                 <h2>Contacto</h1>
             </div>
 
-            <div>
-                <h3>Contactate con nosotros</h3>
-            </div>
 
-           <div>
-                <label for="nombre">Completa tu nombre</label>
-                <input type="text" name="nombre" placeholder="Jose">            
-            </div>
-
-            <div>
-                 <label for="apellido">Completa tu apellido</label>
-                <input type="text" name="apellido" placeholder="Rodriguez">
-            </div>
-
-            <div>
-                <label for="telefono">Completa tu telefono</label>
-                <input type="text" name="telefono" placeholder="1132646844">
-            </div>
-    
-            <div>
-                <label for="mail">Completa tu email</label>
-                <input type="email" name="mail" placeholder="email@gmail.com">
-            </div>
-
-            <fieldset>
-                <legend>Dejanos tu comentario</legend>
-             </fieldset>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13128.272242758538!2d-58.68016209999999!3d-34.65298405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1666722283849!5m2!1ses!2sar"
+           <div class="containerForm">
+            <form class="col-5">
+                <fieldset disabled>
+                    <legend>Contactate con nosotros</legend>
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">Ingresa tu nombre</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">Ingresa tu e-mail</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="e-mail">
+                        </div>
+                        <label for="disabledSelect" class="form-label">Selecciona tu ciudad</label>
+                        <select id="disabledSelect" class="form-select">
+                            <option>Bs As</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                            <label class="form-check-label" for="disabledFieldsetCheck">
+                                Can't check this
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Contactar</button>
+                </fieldset>
+            </form>
+           </div>
+              
+            <div class="containerIframe">
+            <iframe class="col-8" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13128.272242758538!2d-58.68016209999999!3d-34.65298405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1666722283849!5m2!1ses!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
+            </div>
+
         </main>
     <footer class="piePagina">
         <div class="referenciaFinal d-flex">
-            <div>
+            <div class="envios">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-truck icons-footer footer-none" viewBox="0 0 16 16">
                     <path
@@ -96,7 +102,7 @@
                 </svg>
                 <p class="footer-none">ENVIOS</p>
             </div>
-            <div>
+            <div class="cuotas">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-currency-dollar icons-footer" viewBox="0 0 16 16">
                     <path
@@ -104,7 +110,7 @@
                 </svg>
                 <p class="text-center">CUOTAS</p>
             </div>
-            <div>
+            <div class="pick-up">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-shop icons-footer footer-none" viewBox="0 0 16 16">
                     <path
@@ -112,7 +118,7 @@
                 </svg>
                 <p class="footer-none">PICK UP</p>
             </div>
-            <div>
+            <div class="whatsapp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-whatsapp icons-footer" viewBox="0 0 16 16">
                     <path
@@ -120,7 +126,7 @@
                 </svg>
                 <p>WHATSAPP</p>
             </div>
-            <div>
+            <div class="instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-instagram icons-footer" viewBox="0 0 16 16">
                     <path
@@ -128,7 +134,7 @@
                 </svg>
                 <p>INSTAGRAM</p>
             </div>
-            <div>
+            <div class="facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-facebook icons-footer" viewBox="0 0 16 16">
                     <path
