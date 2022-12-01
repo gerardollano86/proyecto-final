@@ -7,4 +7,271 @@
 
 //import
 @import "utilidades/variables";
-@import "principal/index";
+@import "utilidades/mixin";
+
+//nav
+
+    .titulo-pagina {
+    background-color: $color-titulo;
+    }
+ 
+   
+    .iconos{ 
+             ul{
+                 li {
+                       margin: 10px;
+                       padding: 50px;
+                       display: inline-block;
+                   }
+               }
+            }
+
+.nav-direction {
+    background-color: $color-nav;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: rgb(114, 163, 163);
+}
+.nav-direction:hover {
+    background-color: $color-nav-hover;
+}
+.nav-button {
+    border-color: $color-nav-button;
+}
+
+
+/*body index*/
+   .slide {
+       margin-top: 10px;
+   }
+   .slide img {
+       height: 65vh;
+   }
+.container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.button-beba {
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    background-color: rgb(121, 180, 180);
+    border-radius: 5px;
+    font-size: large;
+    border-color: $color-nav-button;
+}
+.button-beba:hover {
+    background-color: rgb(105, 212, 212);
+    box-shadow: 1px 1px 2px black;
+    transform: scale(0.9);
+}
+.button-beba a {
+    text-decoration: none;
+    color: $color-nav;
+}
+/*footer*/
+.piePagina {
+    margin-top: 10px;
+    background-color: rgb(210, 214, 218);
+}
+.referenciaFinal {
+    padding: 10px;
+    justify-content: space-around;
+}
+.container-card {
+    margin: 10px;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/*media query index */
+@media (min-width:360px) and (max-width:578px) {
+    .slide img {
+        height: 40vh;
+    }
+    .container .buttons {
+        margin-top: 10px;
+        @include flex;
+    }
+    .container-card .card {
+        margin: 5px;
+    }
+    .referenciaFinal {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (min-width:578px) and (max-width:920px) {
+    .slide img {
+        height: 50vh;
+    }
+    .referenciaFinal {
+        margin: 10px;
+    }
+    .container-card .card {
+        margin: 8px;
+    }
+}
+@media (min-width:920px) and (max-width:1216px) {
+    .container-card .card {
+        margin: 8px;
+    }
+}
+//baby girl
+.vestido-fantasia {
+    margin: 10px;
+    border-radius: 5px;
+    @include medidas(300px, 300px);
+}
+.vestido-blanco {
+    margin: 10px;
+    padding: 5px;
+    @include medidas(300px, 300px);
+    border-radius: 5px;
+}
+.fantasia-bg {
+    margin: 5px;
+    padding: 10px;
+}
+.contain {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr auto;
+    grid-template-rows: 0.2fr 4fr 4fr 1fr;
+
+    grid-template-areas:
+        "header-bg header-bg header-bg header-bg"
+        "main-bg main-bg main-bg section-bg"
+        "main-bg main-bg main-bg section-bg"
+        "footer-bg footer-bg footer-bg footer-bg";
+
+    .header-bg {
+            grid-area: header-bg;
+            display: inline-block;
+        }
+    
+        .main-bg {
+            font-size: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+            grid-area: main-bg;
+        }
+    
+        .piePagina {
+            grid-area: footer-bg;
+            background-color: #cccc;
+        }
+                .section-bg {
+                    grid-area: section-bg;
+                }
+}
+
+ .descripcion-producto {
+    display: flex;
+    flex-direction: row;
+}
+.main-bg .descripcion-producto p {
+    margin-top: 10px;
+    padding: 10px;
+}
+.main-bg .img {
+    border-radius: 5px;
+}
+.titulo-vestido {
+    margin-top: 20px;
+}
+
+.section-bg .descripcion-producto {
+   @include flex;
+}
+/*media query baby girl */
+@media (min-width:360px) and (max-width:578px) {
+    .contain {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 0.2fr 4fr;
+
+        grid-template-areas:
+            "header-bg header-bg "
+            "main-bg main-bg"
+            "section-bg section-bg"
+            "footer-bg footer-bg";
+    }
+    .menu-hijo {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 5px;
+
+    }
+    .main-bg .descripcion-producto {
+        display: block;
+
+    }
+    .main-bg .descripcion-producto p {
+        margin-top: 10px;
+        padding: 15px;
+        margin: 5px;
+    }
+    .piePagina {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+    }
+    .section-bg .descripcion-producto {
+        display: block;
+    }
+    .parrafo {
+        margin-top: 10px;
+        padding: 15px;
+        margin: 5px;
+    }
+}
+@media (min-width:578px) and (max-width:920px) {
+    .contain {
+
+        grid-template-columns: 1fr 4fr auto;
+        grid-template-rows: 0.2fr 4fr auto;
+
+        grid-template-areas:
+            "header-bg header-bg header-bg"
+            "main-bg main-bg  section-bg"
+            "main-bg main-bg  section-bg"
+            "footer-bg footer-bg footer-bg";
+    }
+    .main-bg .descripcion-producto {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width:920px) and (max-width:1216px) {
+    .contain {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr auto;
+        grid-template-rows: 0.2fr 4fr 4fr 1fr;
+
+        grid-template-areas:
+            "header-bg header-bg header-bg header-bg"
+            "main-bg main-bg main-bg section-bg"
+            "main-bg main-bg main-bg section-bg"
+            "footer-bg footer-bg footer-bg footer-bg";
+    }
+    .menu-hijo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-bg .descripcion-producto {
+        margin-top: 15px;
+    }
+    .titulo-vestido {
+        margin: 5px;
+        margin-top: 5px;
+    }
+    .parrafo {
+        margin: 10px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
