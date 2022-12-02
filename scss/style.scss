@@ -71,8 +71,7 @@
     color: $color-nav;
 }
 /*footer*/
-.piePagina {
-    margin-top: 10px;
+.footer-bb{
     background-color: $color-footer;
 }
 .referenciaFinal {
@@ -105,12 +104,24 @@ footer{
     .container-card .card {
         margin: 5px;
     }
-    .referenciaFinal {
-        padding: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
+   .footer-bb {
+       background-color: $color-footer;
+       flex-direction: column;
+       align-items: center;
+       margin: 0px;
+   }
+
+   .referenciaFinal {
+       padding:5px;
+    flex-direction: column;
+        align-items: center;
+        margin: 0px;
+   }
 }
+
+
+
+
 @media (min-width:578px) and (max-width:920px) {
     .slide img {
         height: 50vh;
@@ -166,9 +177,10 @@ footer{
             grid-area: main-bg;
         }
     
-        .piePagina {
+        .footer-bb {
             grid-area: footer-bg;
             background-color: $color-footer;
+            margin: 0px;
         }
                 .section-bg {
                     grid-area: section-bg;
@@ -224,10 +236,10 @@ footer{
         padding: 15px;
         margin: 5px;
     }
-    .piePagina {
+    .footer-bb {
         display: flex;
-        margin: 10px;
-        padding: 10px;
+        margin: 0px;
+        padding: 0px;
     }
     .section-bg{
         .descripcion-producto {
@@ -327,9 +339,7 @@ footer{
             border-radius: 5px;
             margin: 10px;
             align-items: center;
-        }
-       
-                   
+        }             
 }
 .section-bb {
     text-align: center;
@@ -343,9 +353,10 @@ footer{
         }
   .texto-bb {
       font-size: 20px;
-      margin: 5px;
+      margin: 0px;
   }
 }
+
 /*media query  pagina baby boy */
 @media (min-width:360px) and (max-width:578px) {
     .contain-bb {
@@ -360,7 +371,48 @@ footer{
             "section-bb section-bb "
             "footer-bb footer-bb";
     }
+.container-1 {
+    margin:0px;
+    border: 1px solid black;
+    .texto-bb {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    img {
+        border-radius: 5px;
+        margin: 0px;
+        align-items: center;
+    }
 }
+
+.section-bb {
+    text-align: center;
+    border:0px;
+    background-color: $color-footer;
+    border: 1px solid black;
+
+    img {
+        border-radius: 5px;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto-bb {
+        font-size: 18px;
+        margin:0px;
+        padding: 10px;
+    }
+}
+
+
+}
+
+
+
+
+
 
 @media (min-width:578px) and (max-width:920px) {
     .contain-bb {
@@ -428,4 +480,136 @@ margin-left: 3px;
     font-size: 20px;
     margin: 5px;
     text-decoration: none;
+}
+
+@media (min-width:360px) and (max-width:578px){
+.tittleContacto {
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    .subTittle {
+        margin-left: 3px;
+    }
+
+    .containerForm {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerIframe {
+        @include display;
+    }
+
+    .containerVideo {
+        @include display;
+        padding: 5px;
+
+    }
+
+    .containerParrafo {
+        display: flex;
+        margin: 5px;
+        justify-content: flex-start;
+
+        .p {
+            font-size: 25px;
+            font-style: italic;
+        }
+    }
+
+    .enlace {
+        font-size: 20px;
+        margin: 5px;
+        text-decoration: none;
+    }
+    .footer-bb {
+                display: flex;
+               }
+}
+
+@media (min-width:578px) and (max-width:920px){
+.tittleContacto {
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    .subTittle {
+        margin-left: 3px;
+    }
+
+    .containerForm {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerIframe {
+        @include display;
+    }
+
+    .containerVideo {
+        @include display;
+        padding: 5px;
+
+    }
+
+    .containerParrafo {
+        display: flex;
+        margin: 5px;
+        justify-content: flex-start;
+
+        .p {
+            font-size: 25px;
+            font-style: italic;
+        }
+    }
+
+    .enlace {
+        font-size: 20px;
+        margin: 5px;
+        text-decoration: none;
+    }
+}
+
+@media (min-width:920px) and (max-width:1216px){
+.tittleContacto {
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    .subTittle {
+        margin-left: 3px;
+    }
+
+    .containerForm {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerIframe {
+        @include display;
+    }
+
+    .containerVideo {
+        @include display;
+        padding: 5px;
+
+    }
+
+    .containerParrafo {
+        display: flex;
+        margin: 5px;
+        justify-content: flex-start;
+
+        .p {
+            font-size: 25px;
+            font-style: italic;
+        }
+    }
+
+    .enlace {
+        font-size: 20px;
+        margin: 5px;
+        text-decoration: none;
+    }
 }
