@@ -7,6 +7,7 @@
 
 //import
 @import "utilidades/variables";
+@import "utilidades/extend";
 @import "utilidades/mixin";
 @import "utilidades/mapas";
 //nav
@@ -14,7 +15,6 @@
     .titulo-pagina {
     background-color: $color-titulo;
     }
- 
    .lista{
         .iconos{ 
              ul{
@@ -39,8 +39,6 @@
 .nav-button {
     border-color: $color-nav-button;
 }
-
-
 /*body index*/
    .slide {
        margin-top: 10px;
@@ -73,6 +71,7 @@
 /*footer*/
 .footer-bb{
     background-color: $color-footer;
+    height: 250px
 }
 .referenciaFinal {
     padding: 10px;
@@ -92,6 +91,15 @@ footer{
         }
     }
 }
+.whatsapp{
+    @include redes;
+}
+.instagram{
+    @include redes;
+}
+.facebook{
+    @include redes;
+}
 /*media query index */
 @media (min-width:360px) and (max-width:578px) {
     .slide img {
@@ -109,8 +117,8 @@ footer{
        flex-direction: column;
        align-items: center;
        margin: 0px;
+       height: max-content;
    }
-
    .referenciaFinal {
        padding:5px;
     flex-direction: column;
@@ -118,10 +126,6 @@ footer{
         margin: 0px;
    }
 }
-
-
-
-
 @media (min-width:578px) and (max-width:920px) {
     .slide img {
         height: 50vh;
@@ -158,25 +162,21 @@ footer{
     display: grid;
     grid-template-columns: 1fr 4fr 4fr auto;
     grid-template-rows: 0.2fr 4fr 4fr 1fr;
-
     grid-template-areas:
         "header-bg header-bg header-bg header-bg"
         "main-bg main-bg main-bg section-bg"
         "main-bg main-bg main-bg section-bg"
         "footer-bg footer-bg footer-bg footer-bg";
-
     .header-bg {
             grid-area: header-bg;
             display: inline-block;
-        }
-    
+        } 
         .main-bg {
             font-size: 20px;
             flex-wrap: wrap;
             text-align: center;
             grid-area: main-bg;
-        }
-    
+        } 
         .footer-bb {
             grid-area: footer-bg;
             background-color: $color-footer;
@@ -186,7 +186,6 @@ footer{
                     grid-area: section-bg;
                 }
 }
-
  .descripcion-producto {
     display: flex;
     flex-direction: row;
@@ -203,7 +202,6 @@ footer{
 .titulo-vestido {
     margin-top: 20px;
 }
-
 .section-bg .descripcion-producto {
    @include flex;
 }
@@ -225,11 +223,9 @@ footer{
         align-items: center;
         gap: 1rem;
         margin-top: 5px;
-
     }
     .main-bg .descripcion-producto {
         display: block;
-
     }
     .main-bg .descripcion-producto p {
         margin-top: 10px;
@@ -257,7 +253,6 @@ footer{
 
         grid-template-columns: 1fr 4fr auto;
         grid-template-rows: 0.2fr 4fr auto;
-
         grid-template-areas:
             "header-bg header-bg header-bg"
             "main-bg main-bg  section-bg"
@@ -274,7 +269,6 @@ footer{
         display: grid;
         grid-template-columns: 1fr 4fr 4fr auto;
         grid-template-rows: 0.2fr 4fr 4fr 1fr;
-
         grid-template-areas:
             "header-bg header-bg header-bg header-bg"
             "main-bg main-bg main-bg section-bg"
@@ -364,7 +358,6 @@ footer{
         flex-direction: row;
         grid-template-columns: 2fr auto;
         grid-template-rows: 2fr auto;
-
         grid-template-areas:
             "header-bb header-bb"
             "main-bb main-bb"
@@ -378,27 +371,23 @@ footer{
         font-size: 18px;
         padding: 10px;
     }
-
     img {
         border-radius: 5px;
         margin: 0px;
         align-items: center;
     }
 }
-
 .section-bb {
     text-align: center;
     border:0px;
     background-color: $color-footer;
     border: 1px solid black;
-
     img {
         border-radius: 5px;
         margin: 10px;
         align-items: center;
         justify-content: center;
     }
-
     .texto-bb {
         font-size: 18px;
         margin:0px;
@@ -411,7 +400,6 @@ footer{
         display: grid;
         grid-template-columns: 2fr auto auto;
         grid-template-rows: 2fr auto auto;
-
         grid-template-areas:
             "header-bb header-bb header-bb"
             "main-bb main-bb main-bb"
@@ -419,14 +407,12 @@ footer{
             "footer-bb footer-bb footer-bb";
     }
 }
-
 @media (min-width:920px) and (max-width:1216px) {
     .contain-bb {
         display: grid;
         flex-direction: row;
         grid-template-columns: 2fr auto 2fr auto;
         grid-template-rows: 0.2fr auto 2fr auto;
-
         grid-template-areas:
             "header-bb header-bb header-bb header-bb"
                 "main-bb main-bb section-bb section-bb"
@@ -434,7 +420,6 @@ footer{
                 "footer-bb footer-bb footer-bb footer-bb";
 }
 }
-
 //Contacto - nosotros
 .tittleContacto{
     margin: 10px;
@@ -450,13 +435,10 @@ margin-left: 3px;
 .containerIframe{
     @include display;
 }
-
 .containerVideo{
    @include display;
-    padding: 5px;
-    
+    padding: 15px;  
 }
-
 .containerParrafo{
     display: flex;
     margin: 5px;
@@ -466,48 +448,39 @@ margin-left: 3px;
         font-style: italic;
     }
 }
-
 .enlace{
     font-size: 20px;
     margin: 5px;
     text-decoration: none;
 }
-
 @media (min-width:360px) and (max-width:578px){
 .tittleContacto {
         margin: 10px;
         font-size: 25px;
     }
-
     .subTittle {
         margin-left: 3px;
     }
-
     .containerForm {
         display: flex;
         justify-content: center;
     }
-
     .containerIframe {
         @include display;
     }
-
     .containerVideo {
         @include display;
         padding: 5px;
     }
-
     .containerParrafo {
         display: flex;
         margin: 5px;
         justify-content: flex-start;
-
         .p {
             font-size: 25px;
             font-style: italic;
         }
     }
-
     .enlace {
         font-size: 20px;
         margin: 5px;
@@ -517,88 +490,70 @@ margin-left: 3px;
                 display: flex;
                }
 }
-
 @media (min-width:578px) and (max-width:920px){
 .tittleContacto {
         margin: 10px;
         font-size: 25px;
     }
-
     .subTittle {
         margin-left: 3px;
     }
-
     .containerForm {
         display: flex;
         justify-content: center;
     }
-
     .containerIframe {
         @include display;
     }
-
     .containerVideo {
         @include display;
         padding: 5px;
-
     }
-
     .containerParrafo {
         display: flex;
         margin: 5px;
         justify-content: flex-start;
-
         .p {
             font-size: 25px;
             font-style: italic;
         }
     }
-
     .enlace {
         font-size: 20px;
         margin: 5px;
         text-decoration: none;
     }
 }
-
 @media (min-width:920px) and (max-width:1216px){
 .tittleContacto {
         margin: 10px;
         font-size: 25px;
     }
-
     .subTittle {
         margin-left: 3px;
     }
-
     .containerForm {
         display: flex;
         justify-content: center;
     }
-
     .containerIframe {
         @include display;
         
     }
-
     .containerVideo {
         @include display;
         padding: 5px;
-
     }
-
     .containerParrafo {
         display: flex;
         margin: 5px;
         justify-content: flex-start;
-
         .p {
             font-size: 25px;
             font-style: italic;
         }
     }
-
-    .enlace {
+     .enlace {
         font-size: 20px;
         margin: 5px;
         text-decoration: none;
