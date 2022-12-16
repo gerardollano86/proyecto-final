@@ -1,10 +1,10 @@
 /*reset*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.5;
 }
-
 //import
 @import "utilidades/variables";
 @import "utilidades/extend";
@@ -39,6 +39,17 @@
 .nav-button {
     border-color: $color-nav-button;
 }
+html{
+    height: 100%;
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
 /*body index*/
    .slide {
        margin-top: 10px;
@@ -46,11 +57,18 @@
    .slide img {
        height: 65vh;
    }
-.container {
+
+.container-card{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .buttons {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
+
 .button-beba {
     padding: 5px 20px 5px 20px;
     margin: 5px;
@@ -69,35 +87,77 @@
     color: $color-nav;
 }
 /*footer*/
-.footer-bb{
-    background-color: $color-footer;
-}
-.referenciaFinal {
-    padding: 0px;
-    justify-content: space-around;
-}
-.container-card {
-    margin: 10px;
-    padding: 5px 20px 5px 20px;
+footer {
+    width: 100%;
+    margin-top: 5px;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icons-container,
+.footer-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
-footer{
-    @each $frases, $color in $colores-redes {
-        .#{$frases}{
-            color: $color
-        }
-    }
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(../img/instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 1rem;
 }
-.whatsapp{
-    @include redes;
+
+.social-icon:hover {
+    background-color: whitesmoke;
+    filter: invert(1);
 }
-.instagram{
-    @include redes;
+
+.social-icon:nth-of-type(2) {
+    background-image: url(../img/facebook.png);
 }
-.facebook{
-    @include redes;
+
+.social-icon:nth-of-type(3) {
+    background-image: url(../img/twitter.png);
+}
+
+.social-icon:nth-of-type(4) {
+    background-image: url(../img/whatsapp.png);
+}
+
+.footer-menu-container {
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
 }
 /*media query index */
 @media (min-width:360px) and (max-width:578px) {
@@ -108,28 +168,19 @@ footer{
         margin-top: 10px;
         @include flex;
     }
-    .container-card .card {
-        margin: 5px;
-    }
-   .footer-bb {
-       background-color: $color-footer;
-       flex-direction: column;
-       align-items: center;
-       margin: 0px;
-   }
-   .referenciaFinal {
-       padding:5px;
-    flex-direction: column;
+    .container-card{
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        margin: 0px;
-   }
-}
+        .card{
+            align-items: center;
+        }
+    }
+   
+     }
 @media (min-width:578px) and (max-width:920px) {
     .slide img {
         height: 50vh;
-    }
-    .referenciaFinal {
-        margin: 10px;
     }
     .container-card .card {
         margin: 8px;
@@ -159,7 +210,7 @@ footer{
 .contain {
     display: grid;
     grid-template-columns: 1fr 4fr 4fr auto;
-    grid-template-rows: 0.2fr 4fr 4fr 1fr;
+    grid-template-rows: 0.2fr 4fr 4fr 2fr;
     grid-template-areas:
         "header-bg header-bg header-bg header-bg"
         "main-bg main-bg main-bg section-bg"
@@ -177,12 +228,12 @@ footer{
         } 
         .footer-bb {
             grid-area: footer-bg;
-            background-color: $color-footer;
             margin: 0px;
+            flex-wrap: wrap;
         }
-                .section-bg {
-                    grid-area: section-bg;
-                }
+         .section-bg {
+            grid-area: section-bg;
+         }
 }
  .descripcion-producto {
     display: flex;
@@ -266,7 +317,7 @@ footer{
     .contain {
         display: grid;
         grid-template-columns: 1fr 4fr 4fr auto;
-        grid-template-rows: 0.2fr 4fr 4fr 1fr;
+        grid-template-rows: 0.2fr 4fr 4fr 2fr;
         grid-template-areas:
             "header-bg header-bg header-bg header-bg"
             "main-bg main-bg main-bg section-bg"
@@ -296,7 +347,7 @@ footer{
 .contain-bb {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2.5fr 2.5fr 1fr;
+    grid-template-rows: 0.2fr 2.5fr 2.5fr 2fr;
     grid-template-areas:
         "header-bb header-bb header-bb header-bb"
         "main-bb main-bb section-bb section-bb"
@@ -316,7 +367,7 @@ footer{
 }
 .footer-bb {
     grid-area: footer-bb;
-    background-color: $color-footer;
+    flex-wrap: wrap;
 }
 }
 .container-1 {
@@ -344,7 +395,7 @@ footer{
         justify-content: center;
         }
   .texto-bb {
-      font-size: 20px;
+      font-size: 30px;
       margin: 0px;
   }
 }
@@ -387,7 +438,7 @@ footer{
         justify-content: center;
     }
     .texto-bb {
-        font-size: 18px;
+        font-size: 1.2rem;
         margin:0px;
         padding: 10px;
     }
@@ -396,6 +447,7 @@ footer{
 @media (min-width:578px) and (max-width:920px) {
     .contain-bb {
         display: grid;
+        gap: none;
         grid-template-columns: 2fr auto auto;
         grid-template-rows: 2fr auto auto;
         grid-template-areas:
@@ -404,10 +456,11 @@ footer{
             "section-bb section-bb section-bb"
             "footer-bb footer-bb footer-bb";
     }
-}
-@media (min-width:920px) and (max-width:1216px) {
+          }
+@media (min-width:920px) and (max-width:1250px) {
     .contain-bb {
         display: grid;
+        flex-wrap: wrap;
         flex-direction: row;
         grid-template-columns: 2fr auto 2fr auto;
         grid-template-rows: 0.2fr auto 2fr auto;
@@ -417,7 +470,25 @@ footer{
                 "main-bb main-bb section-bb section-bb"
                 "footer-bb footer-bb footer-bb footer-bb";
 }
-}
+ .texto-bb {
+     font-size: 30px;
+     flex-wrap: wrap;
+     margin: 0px;
+     padding: 10px;
+ }
+
+.section-bb {
+        text-align: center;
+        flex-wrap: wrap;
+
+        .texto-bb {
+            font-size: 30px;
+            margin: 0px;
+            flex-wrap: wrap;
+        }
+    }
+ }
+
 //Contacto - nosotros
 .tittleContacto{
     margin: 10px;
@@ -439,11 +510,13 @@ margin-left: 3px;
 }
 .containerParrafo{
     display: flex;
+    width: 98%;
     margin: 5px;
     justify-content: flex-start;
     .p{
         font-size: 25px;
         font-style: italic;
+        text-align: center;
     }
 }
 .enlace{

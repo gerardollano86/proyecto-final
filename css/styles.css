@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: 0.5; }
 
 .titulo-pagina {
   background-color: #46bbbb; }
@@ -26,6 +27,14 @@
 .nav-button {
   border-color: #72a3a3; }
 
+html {
+  height: 100%; }
+
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+
 /*body index*/
 .slide {
   margin-top: 10px; }
@@ -33,7 +42,11 @@
 .slide img {
   height: 65vh; }
 
-.container {
+.container-card {
+  display: flex;
+  justify-content: space-around; }
+
+.container .buttons {
   margin-top: 10px;
   display: flex;
   justify-content: center; }
@@ -56,49 +69,66 @@
   color: white; }
 
 /*footer*/
-.footer-bb {
-  background-color: #a3a3a3; }
-
-.referenciaFinal {
-  padding: 0px;
-  justify-content: space-around; }
-
-.container-card {
-  margin: 10px;
-  padding: 5px 20px 5px 20px;
+footer {
+  width: 100%;
+  margin-top: 5px;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 8%;
+  background-color: #0e0e0e;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-
-footer .envios {
-  color: #812d2d; }
-
-footer .cuotas {
-  color: #2f6464; }
-
-footer .pick-up {
-  color: #7a5f2d; }
-
-footer .whatsapp {
-  color: #229222; }
-
-footer .instagram {
-  color: #d12929; }
-
-footer .facebook {
-  color: #21217e; }
-
-.whatsapp {
-  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column; }
 
-.instagram {
+.social-icons-container,
+.footer-menu-container {
   display: flex;
-  flex-direction: column; }
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
 
-.facebook {
-  display: flex;
-  flex-direction: column; }
+.social-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid #f2f2f2;
+  background-image: url(../img/instagram.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem; }
+
+.social-icon:hover {
+  background-color: whitesmoke;
+  filter: invert(1); }
+
+.social-icon:nth-of-type(2) {
+  background-image: url(../img/facebook.png); }
+
+.social-icon:nth-of-type(3) {
+  background-image: url(../img/twitter.png); }
+
+.social-icon:nth-of-type(4) {
+  background-image: url(../img/whatsapp.png); }
+
+.footer-menu-container {
+  list-style-type: none;
+  color: #f2f2f2;
+  font-size: 18px; }
+
+.menu-item {
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6; }
+
+.menu-item:hover {
+  opacity: 1; }
+
+.copyright {
+  color: #f2f2f2;
+  opacity: 0.3;
+  text-align: center; }
 
 /*media query index */
 @media (min-width: 360px) and (max-width: 578px) {
@@ -109,24 +139,16 @@ footer .facebook {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .container-card .card {
-    margin: 5px; }
-  .footer-bb {
-    background-color: #a3a3a3;
+  .container-card {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0px; }
-  .referenciaFinal {
-    padding: 5px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px; } }
+    align-items: center; }
+    .container-card .card {
+      align-items: center; } }
 
 @media (min-width: 578px) and (max-width: 920px) {
   .slide img {
     height: 50vh; }
-  .referenciaFinal {
-    margin: 10px; }
   .container-card .card {
     margin: 8px; } }
 
@@ -154,7 +176,7 @@ footer .facebook {
 .contain {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr auto;
-  grid-template-rows: 0.2fr 4fr 4fr 1fr;
+  grid-template-rows: 0.2fr 4fr 4fr 2fr;
   grid-template-areas: "header-bg header-bg header-bg header-bg" "main-bg main-bg main-bg section-bg" "main-bg main-bg main-bg section-bg" "footer-bg footer-bg footer-bg footer-bg"; }
   .contain .header-bg {
     grid-area: header-bg;
@@ -166,8 +188,8 @@ footer .facebook {
     grid-area: main-bg; }
   .contain .footer-bb {
     grid-area: footer-bg;
-    background-color: #a3a3a3;
-    margin: 0px; }
+    margin: 0px;
+    flex-wrap: wrap; }
   .contain .section-bg {
     grid-area: section-bg; }
 
@@ -232,7 +254,7 @@ footer .facebook {
   .contain {
     display: grid;
     grid-template-columns: 1fr 4fr 4fr auto;
-    grid-template-rows: 0.2fr 4fr 4fr 1fr;
+    grid-template-rows: 0.2fr 4fr 4fr 2fr;
     grid-template-areas: "header-bg header-bg header-bg header-bg" "main-bg main-bg main-bg section-bg" "main-bg main-bg main-bg section-bg" "footer-bg footer-bg footer-bg footer-bg"; }
   .main-bg .descripcion-producto {
     margin-top: 15px; }
@@ -255,7 +277,7 @@ footer .facebook {
 .contain-bb {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
-  grid-template-rows: 0.2fr 2.5fr 2.5fr 1fr;
+  grid-template-rows: 0.2fr 2.5fr 2.5fr 2fr;
   grid-template-areas: "header-bb header-bb header-bb header-bb" "main-bb main-bb section-bb section-bb" "main-bb main-bb section-bb section-bb" "footer-bb footer-bb footer-bb footer-bb"; }
   .contain-bb .header-bb {
     width: 100%;
@@ -268,7 +290,7 @@ footer .facebook {
     grid-area: section-bb; }
   .contain-bb .footer-bb {
     grid-area: footer-bb;
-    background-color: #a3a3a3; }
+    flex-wrap: wrap; }
 
 .container-1 {
   text-align: center;
@@ -292,7 +314,7 @@ footer .facebook {
     align-items: center;
     justify-content: center; }
   .section-bb .texto-bb {
-    font-size: 20px;
+    font-size: 30px;
     margin: 0px; }
 
 /*media query  pagina baby boy */
@@ -324,24 +346,38 @@ footer .facebook {
       align-items: center;
       justify-content: center; }
     .section-bb .texto-bb {
-      font-size: 18px;
+      font-size: 1.2rem;
       margin: 0px;
       padding: 10px; } }
 
 @media (min-width: 578px) and (max-width: 920px) {
   .contain-bb {
     display: grid;
+    gap: none;
     grid-template-columns: 2fr auto auto;
     grid-template-rows: 2fr auto auto;
     grid-template-areas: "header-bb header-bb header-bb" "main-bb main-bb main-bb" "section-bb section-bb section-bb" "footer-bb footer-bb footer-bb"; } }
 
-@media (min-width: 920px) and (max-width: 1216px) {
+@media (min-width: 920px) and (max-width: 1250px) {
   .contain-bb {
     display: grid;
+    flex-wrap: wrap;
     flex-direction: row;
     grid-template-columns: 2fr auto 2fr auto;
     grid-template-rows: 0.2fr auto 2fr auto;
-    grid-template-areas: "header-bb header-bb header-bb header-bb" "main-bb main-bb section-bb section-bb" "main-bb main-bb section-bb section-bb" "footer-bb footer-bb footer-bb footer-bb"; } }
+    grid-template-areas: "header-bb header-bb header-bb header-bb" "main-bb main-bb section-bb section-bb" "main-bb main-bb section-bb section-bb" "footer-bb footer-bb footer-bb footer-bb"; }
+  .texto-bb {
+    font-size: 30px;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px; }
+  .section-bb {
+    text-align: center;
+    flex-wrap: wrap; }
+    .section-bb .texto-bb {
+      font-size: 30px;
+      margin: 0px;
+      flex-wrap: wrap; } }
 
 .tittleContacto {
   margin: 10px;
@@ -367,11 +403,13 @@ footer .facebook {
 
 .containerParrafo {
   display: flex;
+  width: 98%;
   margin: 5px;
   justify-content: flex-start; }
   .containerParrafo .p {
     font-size: 25px;
-    font-style: italic; }
+    font-style: italic;
+    text-align: center; }
 
 .enlace {
   font-size: 20px;
