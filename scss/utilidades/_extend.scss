@@ -1,0 +1,27 @@
+
+@import"variables";
+
+
+.button{
+        padding: 5px 20px 5px 20px;
+        margin: 5px;
+       
+        border-radius: 5px;
+        border-radius: 5px;
+        font-size: large;
+        border-color: $color-nav-button;
+}
+.beba{
+   @extend .button;
+   background-color: rgb(121, 180, 180);
+ a {
+        text-decoration: none;
+        color: $color-nav;
+    }
+
+       &:hover {
+            background-color: rgb(105, 212, 212);
+            box-shadow: 1px 1px 2px black;
+            transform: scale(0.9);
+        }
+}
